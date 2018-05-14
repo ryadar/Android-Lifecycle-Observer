@@ -45,4 +45,11 @@ class MainActivity : AppCompatActivity() {
         Log.i(TAG, "onDestroy")
 
     }
+
+    fun checkStartStatus(){
+
+        if(lifecycle.currentState.isAtLeast(Lifecycle.State.STARTED)){
+            // do action after activity started
+        }
+    }
 }
