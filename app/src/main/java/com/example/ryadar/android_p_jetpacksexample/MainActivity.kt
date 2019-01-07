@@ -7,7 +7,7 @@ import android.os.Bundle
 import android.util.Log
 
 class MainActivity : AppCompatActivity() {
-    val TAG: String = "MainActivity"
+    val TAG : String = MainActivity::class.java.simpleName
 
     override fun onStart() {
         super.onStart()
@@ -46,9 +46,9 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    fun checkStartStatus(){
+    fun checkStartStatus() {
 
-        if(lifecycle.currentState.isAtLeast(Lifecycle.State.STARTED)){
+        if (lifecycle.currentState.isAtLeast(Lifecycle.State.STARTED)) {
             // do action after activity started
         }
     }

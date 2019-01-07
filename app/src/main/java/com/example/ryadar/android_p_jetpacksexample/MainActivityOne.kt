@@ -13,10 +13,10 @@ class MainActivityOne : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_one)
-        if(savedInstanceState==null){
+        if (savedInstanceState == null) {
             var manager: FragmentManager = supportFragmentManager
             var transaction: FragmentTransaction = manager.beginTransaction()
-            transaction.add(R.id.frame_layout,MyFragment(),"MyFragment").commit()
+            transaction.add(R.id.frame_layout, MyFragment(), MyFragment::class.java.simpleName).commit()
         }
 
     }
